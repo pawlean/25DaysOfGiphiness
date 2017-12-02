@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
 	<title>25 Days of Giphiness</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
+	</style>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-	{% for gif_url in gifs %}
-		<img src="{{gif_url}}" alt="some gif">
-	{% endfor %}
+	<h1>✨🎁 25 Days of GIPHY 🎄✨</h1>
+	<div class="container1">
+		{% for i, gif_url in enumerate(gifs, start=1) %}
+			<div class="days day{{i}}">
+				<h1>{{i}}</h1>
+				<img src="{{gif_url}}" class="hidden" alt="some gif">
+			</div>
+		{% endfor %}
+	</div>
+<footer class="footer">
+	Made with by 💖
+	<a href="about.html">#shefcodefirst team</a> &
+	<a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grid.</a>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
  crossorigin="anonymous"></script>

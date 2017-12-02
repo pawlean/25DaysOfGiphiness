@@ -7,6 +7,6 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     giphy_res = get_gifs()
-    return render_template("index.html", gifs=giphy_res)
+    return render_template("index.html", gifs=giphy_res, enumerate=enumerate)
 
 app.run(debug=True)
