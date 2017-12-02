@@ -3,36 +3,14 @@
 <body>
 <h1>The Team 👥</h1>
 <div class="container">
-	<div class="block">
-		<h2>Member</h2>
-		<p>Bio & image</p>
-	</div>
-
-  <div class="block1">
- 	<h2>Member</h2>
-		<p>Bio</p>
-  </div>
-
-    <div class="block2">
-  	<h2>Member</h2>
-			<p>Bio</p>
-  </div>
-
- 	<div class="block3">
-	<h2>Member</h2>
-		<p>Bio</p>
-	</div>
-
-  <div class="block4">
-  	<h2>Member</h2>
-			<p>Bio</p>
-  </div>
-
-    <div class="block5">
-  	<h2>Member</h2>
-			<p>Bio</p>
-  </div>
-
+	{% for member in members %}
+		<div class="block">
+			<h2>{{member["name"]}}</h2>
+			<img src="{{member['avatarUrl']}}" alt="{{member['name']}}">
+			<br>
+			<p>{{member["bio"]}}</p>
+		</div>
+	{% endfor %}
 </div>
 
 
