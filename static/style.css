@@ -20,14 +20,6 @@ body{
 			"day21" "day22" "day23" "day24"
 			"day25"
 	}
-		.day25{
-		display: grid;
-		grid-template-rows: 3fr;
-		 grid-column-start: 2;
-		 grid-column-end: five;
-		 grid-row-start: row1-start;
-		 grid-row-end: 3;
-	}
 
 .days {
 	border: 1px solid grey;
@@ -99,3 +91,6 @@ body{
 			border-bottom: 1px dotted grey;
 		}
 
+.hidden {
+	display: none;
+}
