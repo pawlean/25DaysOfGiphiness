@@ -1,5 +1,6 @@
 import os
 import re
+import config
 
 import requests
 
@@ -9,7 +10,7 @@ def get_gifs(keyword="christmas"):
         return re.sub(r"media[0-9]", "i", wrong_url)
 
     params = {
-        "api_key": os.environ["giphy_key"],
+        "api_key": config.giphy_key,
         "q": keyword,
         "limit": 25
     }

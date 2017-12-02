@@ -3,3 +3,4 @@ my_git_token.py
 __pycache__
 .vscode
 jsconfig.json
+config.*
