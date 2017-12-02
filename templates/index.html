@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>25 Days of Giphiness</title>
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
-	</style>
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body >
-<div id="snow">
-	<h1 class="title">✨🎁 25 Days of GIPHY 🎄✨</h1>
+{% include "header.html" %}
+<body>
+	<h1>✨🎁 25 Days of GIPHY 🎄✨</h1>
 	<div class="container1">
 		{% for i, gif_url in enumerate(gifs, start=1) %}
 			<div class="days day{{i}}">
