@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template
 
 from giphy_api import get_gifs
@@ -16,3 +18,7 @@ def about():
     return render_template("about.html", members=profiles, enumerate=enumerate)
 
 app.run(debug=True)
+if 'PORT' in os.environ:
+     app.run(host='0.0.0.0', port=int(os.environ['PORT']))
+else:
+     app.run(debug=True)
