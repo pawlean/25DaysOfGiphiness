@@ -37,30 +37,29 @@ body{
 			"block3" "block4" "block5"
 		}
 		.block {
-			background-color: blue;
+
 			text-align: center;
 		
 		}
 		.block1{
-			background-color: purple;
 			text-align: center;
 		
 		}
 		.block2{
-			background-color: green;
 			text-align: center;
 		}
 			.block3{
-			background-color: pink;
 			text-align: center;
+				border-top: 1px solid white;
 		}
 		.block4{
-			background-color: green;
 			text-align: center;
+				border-top: 1px solid white;
 		}
 		.block5{
-			background-color: yellow;
+
 			text-align: center;
+				border-top: 1px solid white;
 		}
 
 		h1 {
@@ -74,9 +73,13 @@ body{
 		h1.title {
 			color: #ffffff;
 		}
+		h2 {
+			color: #ffffff;
+		}
 
 		p{
 			padding: 10px;
+			color: white;
 		}
 
 		.footer {
@@ -95,6 +98,7 @@ body{
 			color: black;
 			border-bottom: 1px dotted grey;
 		}
+
 
 .hidden {
 	display: none;
