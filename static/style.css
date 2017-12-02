@@ -30,7 +30,7 @@ body{
 }
 		.container {
 			display: grid;
-			grid-template-rows: 2fr 2fr 2fr;
+			grid-template-rows: 2fr 2fr;
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-template-areas: 
 			"block" "block1" "block2" 
