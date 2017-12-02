@@ -1,23 +1,14 @@
 #!/usr/bin/env python3
 
-import my_git_token
-import requests
 import json
+import requests
+import config
 
-token = my_git_token.my_token()
-pass1 = my_git_token.pass1()
+def get_profiles():
+    token = config.git_key
 
-headers = {'Authorization':'Bearer '+token}
-print(headers)
-
-query = '{ repository(owner: "paulienuh", name: "25DaysOfGiphiness") { collaborators(first: 20) {edges {node {name login bio bioHTML }}}}}'
-
-
-
-r = requests.post('https://api.github.com/graphql', json.dumps({"query": query}), headers=headers)
-
-
-git_bio = (r.json())
-
-with open('git_bio.json', 'w') as outfile:
-	json.dump(git_bio, outfile)
+    headers = {'Authorization':'Bearer '+token}
+    query = '{ repository(owner: "paulienuh", name: "25DaysOfGiphiness") { collaborators(first: 20) {nodes {name login bio avatarUrl }}}}'
+    r = requests.post('https://api.github.com/graphql', json.dumps({"query": query}), headers=headers)
+    git_bios = r.json()["data"]["repository"]["collaborators"]["nodes"]
+    return git_bios
