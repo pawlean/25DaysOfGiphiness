@@ -85,7 +85,7 @@ body{
 		}
 
 		.footer {
-			font-family: 'Roboto' sans-serif;
+			font-family: 'Roboto', sans-serif;
 			background-color: white;
 			text-align: center;
 			grid-row-start: 2;
