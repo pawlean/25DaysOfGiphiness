@@ -1,0 +1,80 @@
+body{
+		font-family: 'Roboto', sans-serif;
+
+	}
+	.container1{
+		display: grid;
+		background-color: white;
+		grid-template-rows: 2fr 2fr 2fr;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-areas: 
+			"day1" "day2" "day3" "day4"
+			"day5" "day6" "day7" "day8"
+			"day9" "day10" "day11" "day12"
+			"day13" "day14" "day15" "day16"
+			"day17" "day18" "day19" "day20"
+			"day21" "day22" "day23" "day24"
+			"day25"
+	}
+		.day25{
+		display: grid;
+		grid-template-rows: 3fr;
+		 grid-column-start: 2;
+		 grid-column-end: five;
+		 grid-row-start: row1-start;
+		 grid-row-end: 3;
+	}
+.days {
+	border: 1px solid grey;
+	padding: 10px;
+
+}
+		.container {
+			display: grid;
+			background-color: red;
+			grid-template-rows: 2fr 2fr 2fr;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas: 
+			"block" "block1" "block2" 
+			"block3" "block4" "block5"
+		}
+		.block {
+			background-color: blue;
+			text-align: center;
+		
+		}
+		.block1{
+			background-color: purple;
+			text-align: center;
+		
+		}
+		.block2{
+			background-color: green;
+			text-align: center;
+		}
+			.block3{
+			background-color: pink;
+			text-align: center;
+		}
+		.block4{
+			background-color: green;
+			text-align: center;
+		}
+		.block5{
+			background-color: yellow;
+			text-align: center;
+		}
+
+		h1 {
+            text-align: center;
+			font-family: 'Slabo 27px', serif;
+			font-size: 40px;
+		}
+
+		p{
+			padding: 10px;
+		}
+
+		.footer {
+			background-color: red;
+		}
