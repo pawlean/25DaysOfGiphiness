@@ -15,4 +15,13 @@ $(() => {
             }
         });
     }
+
+    $("html").click(() => {
+        let $santaDiv = $(".santa_div"),
+            $santaClone = $santaDiv.clone(true);
+        
+        $santaDiv.before($santaClone);
+
+        $(`.${$santaDiv.attr("class")}:last`).remove();
+    });
 });

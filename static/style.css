@@ -141,4 +141,102 @@ body{
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}	
+}
+
+/* Animated santa */
+.santa_div {
+	width: 100px;
+	opacity: 0;
+	height: 100px;
+	position: absolute;
+	-webkit-animation-name: example;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 7s;
+	/* Safari 4.0 - 8.0 */
+	animation-name: example;
+	animation-duration: 3s;
+	animation-duration: 3000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes example {
+	0% {
+		background-color: red;
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		background-color: yellow;
+		left: 200px;
+		top: 0px;
+	}
+	50% {
+		background-color: blue;
+		left: 200px;
+		top: 200px;
+	}
+	75% {
+		background-color: green;
+		left: 0px;
+		top: 200px;
+	}
+	100% {
+		background-color: red;
+		left: 0px;
+		top: 0px;
+	}
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Standard syntax */
+
+@keyframes example {
+	0% {
+		left: 1600px;
+		top: 0px;
+		opacity: 0;
+	}
+	25% {
+		left: 1200px;
+		top: 0px;
+		opacity: 1;
+	}
+	50% {
+		left: 800px;
+		top: 0px;
+		opacity: 0.85;
+	}
+	75% {
+		left: 400px;
+		top: 0px;
+		opacity: 0.95;
+	}
+	100% {
+		left: -100px;
+		top: 0px;
+		opacity: 0;
+	}
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

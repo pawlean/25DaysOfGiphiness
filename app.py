@@ -1,4 +1,5 @@
 import os
+from datetime import date
 
 from flask import Flask, render_template
 
@@ -10,7 +11,8 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     giphy_res = get_gifs()
-    return render_template("index.html", gifs=giphy_res, enumerate=enumerate)
+    print(f"today's day: {date.today().day}", type(date.today().day))
+    return render_template("index.html", gifs=giphy_res, enumerate=enumerate, this_day=date.today().day)
 
 @app.route("/about")
 def about():
@@ -18,6 +20,6 @@ def about():
     return render_template("about.html", members=profiles, enumerate=enumerate)
 
 if 'PORT' in os.environ:
-     app.run(host='0.0.0.0', port=int(os.environ['PORT']))
+    app.run(host='0.0.0.0', port=int(os.environ['PORT']))
 else:
-     app.run(debug=True)
+    app.run(debug=True)
