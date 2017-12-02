@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 from giphy_api import get_gifs
+from graphiql_request import get_profiles
 
 app = Flask(__name__)
 
@@ -11,6 +12,7 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    profiles = get_profiles()
+    return render_template("about.html", members=profiles, enumerate=enumerate)
 
 app.run(debug=True)
