@@ -9,4 +9,8 @@ def index():
     giphy_res = get_gifs()
     return render_template("index.html", gifs=giphy_res, enumerate=enumerate)
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 app.run(debug=True)
