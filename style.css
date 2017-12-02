@@ -2,10 +2,14 @@ body{
 		font-family: 'Roboto', sans-serif;
 
 	}
+
+	html{
+		height:100%;
+	}
 	.container1{
 		display: grid;
 		background-color: white;
-		grid-template-rows: 2fr 2fr 2fr;
+		grid-template-rows: 2fr auto;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			grid-template-areas: 
 			"day1" "day2" "day3" "day4"
@@ -24,14 +28,17 @@ body{
 		 grid-row-start: row1-start;
 		 grid-row-end: 3;
 	}
+
 .days {
 	border: 1px solid grey;
 	padding: 10px;
 
 }
+.days:hover {
+	background-color: #ededed;
+}
 		.container {
 			display: grid;
-			background-color: red;
 			grid-template-rows: 2fr 2fr 2fr;
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-template-areas: 
@@ -76,5 +83,19 @@ body{
 		}
 
 		.footer {
-			background-color: red;
+			background-color: white;
+			text-align: center;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			padding: 20px; 
+
 		}
+		a {
+			color: #b20000;
+			text-decoration: none;
+		}
+		a:hover {
+			color: black;
+			border-bottom: 1px dotted grey;
+		}
+
