@@ -17,7 +17,6 @@ def about():
     profiles = get_profiles()
     return render_template("about.html", members=profiles, enumerate=enumerate)
 
-app.run(debug=True)
 if 'PORT' in os.environ:
      app.run(host='0.0.0.0', port=int(os.environ['PORT']))
 else:
