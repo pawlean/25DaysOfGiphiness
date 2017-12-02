@@ -7,8 +7,9 @@
 	</style>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-	<h1>✨🎁 25 Days of GIPHY 🎄✨</h1>
+<body >
+<div id="snow">
+	<h1 class="title">✨🎁 25 Days of GIPHY 🎄✨</h1>
 	<div class="container1">
 		{% for i, gif_url in enumerate(gifs, start=1) %}
 			<div class="days day{{i}}">
@@ -17,14 +18,18 @@
 			</div>
 		{% endfor %}
 	</div>
+
+<br>
 <footer class="footer">
 	Made with by 💖
 	<a href="about.html">#shefcodefirst team</a> &
 	<a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grid.</a>
 </footer>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
  crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='index.js') }}"></script>
+
 </body>
 </html>
