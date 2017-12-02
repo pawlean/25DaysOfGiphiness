@@ -2,10 +2,10 @@
 
 import json
 import requests
-import config
+import os
 
 def get_profiles():
-    token = config.git_key
+    token = os.environ["github_api_key"]
 
     headers = {'Authorization':'Bearer '+token}
     query = '{ repository(owner: "paulienuh", name: "25DaysOfGiphiness") { collaborators(first: 20) {nodes {name login bio avatarUrl }}}}'
