@@ -1,242 +1,269 @@
-body{
-		font-family: 'Roboto', sans-serif;
-		background-color:	#004080;
-	}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #004080;
+}
 
-	html{
-		height:100%;
-	}
-	.container1{
-		display: grid;
-		grid-template-rows: 2fr auto;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			grid-template-areas: 
-			"day1" "day2" "day3" "day4"
-			"day5" "day6" "day7" "day8"
-			"day9" "day10" "day11" "day12"
-			"day13" "day14" "day15" "day16"
-			"day17" "day18" "day19" "day20"
-			"day21" "day22" "day23" "day24"
-			"day25"
-	}
+.container {
+  display: grid;
+  grid-template-rows: 2fr auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "day1 day2 day3 day4"
+    "day5 day6 day7 day8"
+    "day9 day10 day11 day12"
+    "day13 day14 day15 day16"
+    "day17 day18 day19 day20"
+    "day21 day22 day23 day24"
+    "day25 day25 day25 day25";
+}
 
 .days {
-	border: 1px solid #ffffff;
-	padding: 10px;
-
+  border: 1px solid #ffffff;
+  padding: 10px;
+  user-select: none;
 }
+
 .days:hover {
-	background-color: #800000;
+  background-color: #800000;
 }
-		.container {
-			display: grid;
-			grid-template-rows: 2fr 2fr;
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-template-areas: 
-			"block" "block1" "block2" 
-			"block3" "block4" "block5"
-		}
 
-		.block {
+.day25 {
+  grid-area: day25;
+  min-height: 200px;
+}
 
-			text-align: center;
+.block {
+  text-align: center;
+}
 
-		
-		}
-		.block1{
-			text-align: center;
-		
-		}
-		.block2{
-			text-align: center;
-		}
-			.block3{
-			text-align: center;
-				border-top: 1px solid white;
-		}
-		.block4{
-			text-align: center;
-				border-top: 1px solid white;
-		}
-		.block5{
+.block1 {
+  text-align: center;
+}
 
-			text-align: center;
-				border-top: 1px solid white;
-		}
+.block2 {
+  text-align: center;
+}
 
-		h1 {
-            text-align: center;
-			font-family: 'Slabo 27px', serif;
-			font-size: 40px;
+.block3 {
+  text-align: center;
+  border-top: 1px solid white;
+}
 
-			color: #ffffff;
-		}
+.block4 {
+  text-align: center;
+  border-top: 1px solid white;
+}
 
-		h1.title {
-			color: #ffffff;
-		}
-		h2 {
-			color: #ffffff;
-		}
+.block5 {
+  text-align: center;
+  border-top: 1px solid white;
+}
 
-		p{
-			padding: 10px;
-			color: white;
-		}
+h1 {
+  text-align: center;
+  font-family: 'Slabo 27px', serif;
+  font-size: 40px;
+  color: #ffffff;
+}
 
-		.footer {
-			font-family: 'Roboto', sans-serif;
-			background-color: white;
-			text-align: center;
-			grid-row-start: 2;
-			grid-row-end: 3;
-			padding: 20px; 
+h1.title {
+  color: #ffffff;
+  margin-top: 0;
+  padding-top: 0.5em;
+}
 
-		}
-		a {
-			color: #b20000;
-			text-decoration: none;
-		}
-		a:hover {
-			color: black;
-			border-bottom: 1px dotted grey;
-		}
+h2 {
+  color: #ffffff;
+}
+
+p {
+  padding: 10px;
+  color: white;
+}
+
+.footer {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  text-align: center;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 20px;
+}
+
+a {
+  color: #b20000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  border-bottom: 1px dotted grey;
+}
 
 .hidden {
-	display: none;
+  display: none;
 }
 
-
-#snow{
-	background: none;
-	font-family: Androgyne;
-	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index:1;
-	-webkit-animation: snow 10s linear infinite;
-	-moz-animation: snow 10s linear infinite;
-	-ms-animation: snow 10s linear infinite;
-	animation: snow 10s linear infinite;
+#snow {
+  background: none;
+  font-family: Androgyne;
+  background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+  height: 100%;
+  left: 0;
+  /* position: absolute; */
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-animation: snow 10s linear infinite;
+  -moz-animation: snow 10s linear infinite;
+  -ms-animation: snow 10s linear infinite;
+  animation: snow 10s linear infinite;
 }
+
 @keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
 }
+
 @-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 400px 1000px, 200px 400px, 100px 300px;
+  }
 }
+
 @-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
 }
+
 @-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
 }
 
 /* Animated santa */
+
 .santa_div {
-	width: 100px;
-	opacity: 0;
-	height: 100px;
-	position: absolute;
-	-webkit-animation-name: example;
-	/* Safari 4.0 - 8.0 */
-	-webkit-animation-duration: 7s;
-	/* Safari 4.0 - 8.0 */
-	animation-name: example;
-	animation-duration: 3s;
-	animation-duration: 3000ms;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
+  width: 100px;
+  opacity: 0;
+  height: 100px;
+  position: absolute;
+  -webkit-animation-name: example;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 7s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 3s;
+  animation-duration: 3000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 
 /* Safari 4.0 - 8.0 */
 
 @-webkit-keyframes example {
-	0% {
-		background-color: red;
-		left: 0px;
-		top: 0px;
-	}
-	25% {
-		background-color: yellow;
-		left: 200px;
-		top: 0px;
-	}
-	50% {
-		background-color: blue;
-		left: 200px;
-		top: 200px;
-	}
-	75% {
-		background-color: green;
-		left: 0px;
-		top: 200px;
-	}
-	100% {
-		background-color: red;
-		left: 0px;
-		top: 0px;
-	}
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Standard syntax */
 
 @keyframes example {
-	0% {
-		left: 1600px;
-		top: 0px;
-		opacity: 0;
-	}
-	25% {
-		left: 1200px;
-		top: 0px;
-		opacity: 1;
-	}
-	50% {
-		left: 800px;
-		top: 0px;
-		opacity: 0.85;
-	}
-	75% {
-		left: 400px;
-		top: 0px;
-		opacity: 0.95;
-	}
-	100% {
-		left: -100px;
-		top: 0px;
-		opacity: 0;
-	}
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  0% {
+    left: 1600px;
+    top: 0px;
+    opacity: 0;
+  }
+  25% {
+    left: 1200px;
+    top: 0px;
+    opacity: 1;
+  }
+  50% {
+    left: 800px;
+    top: 0px;
+    opacity: 0.85;
+  }
+  75% {
+    left: 400px;
+    top: 0px;
+    opacity: 0.95;
+  }
+  100% {
+    left: -100px;
+    top: 0px;
+    opacity: 0;
+  }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
