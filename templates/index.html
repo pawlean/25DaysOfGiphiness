@@ -1,14 +1,14 @@
 {% include "header.html" %}
-<body>	
+<body>
 	<div id="snow">
 	<div class="santa_div"><img src="{{ url_for('static', filename='santa.png') }}" width="100" height="100"></div>
-	<h1>✨🎁 25 Days of GIPHY 🎄✨</h1>
+	<h1 class="title">✨🎁 25 Days of GIPHY 🎄✨</h1>
 
-	<div class="container1">
+	<div class="container">
 		{% for i, gif_url in enumerate(gifs, start=1) %}
 			<div class="days day{{i}}">
 				<h1>{{i}}</h1>
-				{% if i <= this_day %}				
+				{% if i <= this_day %}
 					<center><img src="{{gif_url}}" class="hidden" alt="some gif" ></center>
 				{% endif %}
 			</div>
