@@ -14,10 +14,6 @@ def get_gifs(keyword="christmas"):
         "limit": 25
     }
     gif_res = requests.get("https://api.giphy.com/v1/gifs/search", params=params).json()["data"]
-    resp = [correct_url(gif["images"]["fixed_width"]["url"]) for gif in gif_res]
+    resp = [(correct_url(gif["images"]["fixed_width"]["url"]), gif["title"])
+            for gif in gif_res]
     return resp
-
-
-if __name__ == '__main__':
-    gifs = get_gifs()
-    print(gifs, len(gifs))
