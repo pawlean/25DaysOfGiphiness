@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
+
 * {
   box-sizing: border-box;
 }
@@ -10,6 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #004080;
   overflow-x: hidden;
+  margin: 0;
 }
 
 .container {
@@ -103,6 +106,41 @@ body {
         "day25";
     }
   }
+
+  .about-container {
+      display: grid;
+      grid-template-rows: 2fr 2fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+      "block block1 block2" 
+      "block3 block4 block5";
+      grid-auto-columns: 1fr 1fr 1fr;
+      grid-auto-rows: 2fr 2fr;
+  }
+
+  @media screen and (max-width: 750px) {
+    .about-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+      "block block1"
+      "block2 block3"
+      "block4 block5";
+      grid-auto-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .about-container {
+      grid-template-columns: minmax(220px, 1fr);
+      grid-template-areas:
+      "block"
+      "block1"
+      "block2"
+      "block3"
+      "block4"
+      "block5";
+    }
+  }
 }
 
 .days {
@@ -181,6 +219,7 @@ p {
   grid-row-start: 2;
   grid-row-end: 3;
   padding: 20px;
+  margin-top: 20px;
 }
 
 a {
@@ -198,6 +237,7 @@ a:hover {
 }
 
 #snow {
+  margin: 8px;
   overflow-x: hidden;
   background: none;
   font-family: Androgyne;
@@ -266,11 +306,11 @@ a:hover {
   opacity: 0;
   height: 100px;
   position: absolute;
-  -webkit-animation-name: example;
+  -webkit-animation-name: skating;
   /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 7s;
   /* Safari 4.0 - 8.0 */
-  animation-name: example;
+  animation-name: skating;
   animation-duration: 3s;
   animation-duration: 3000ms;
   animation-iteration-count: 1;
@@ -279,7 +319,7 @@ a:hover {
 
 /* Safari 4.0 - 8.0 */
 
-@-webkit-keyframes example {
+@-webkit-keyframes skating {
   0% {
     background-color: red;
     left: 0px;
@@ -315,7 +355,7 @@ a:hover {
 
 /* Standard syntax */
 
-@keyframes example {
+@keyframes skating {
   0% {
     left: 1600px;
     top: 0px;
@@ -341,15 +381,6 @@ a:hover {
     top: 0px;
     opacity: 0;
   }
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
   from {
     transform: rotate(0deg);
   }
