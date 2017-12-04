@@ -1,28 +1,29 @@
 {% include "header.html" %}
 <body>
-	<div id="snow">
-	<div class="santa_div"><img src="{{ url_for('static', filename='santa.png') }}" width="100" height="100"></div>
-	<h1 class="title">✨🎁 25 Days of GIPHY 🎄✨</h1>
+  <div id="snow">
+    <div class="santa_div">
+      <img src="{{ url_for('static', filename='santa.png') }}" width="100" height="100">
+    </div>
+    <h1 class="title">✨🎁 25 Days of GIPHY 🎄✨</h1>
 
-	<div class="container">
-		{% for i, gif_url in enumerate(gifs, start=1) %}
-			<div class="days day{{i}}">
-				<h1>{{i}}</h1>
-				{% if i <= this_day %}
-					<center><img src="{{gif_url}}" class="hidden" alt="some gif" ></center>
-				{% endif %}
-			</div>
-		{% endfor %}
-	</div>
+    <div class="container">
+      {% for i, gif_url in enumerate(gifs, start=1) %}
+        <div class="days day{{i}}">
+          <h1>{{i}}</h1>
+          {# + 1 to account for potential "secret" santa feature which will allow user to reveal one future GIF #}
+          {% if i <= this_day + 1 %}
+            <center><img src="{{gif_url}}" class="hidden" alt="some gif" ></center>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 
-
-<br>
-<footer class="footer">
-	Made with 💖 by
-	<a href="{{url_for('about')}}">#shefcodefirst team</a> &
-	<a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grid.</a>
-</footer>
-</div>
+  <footer class="footer">
+    Made with 💖 by
+    <a href="{{url_for('about')}}">#shefcodefirst team</a> &
+    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grid.</a>
+  </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
  crossorigin="anonymous"></script>

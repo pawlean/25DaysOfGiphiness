@@ -1,19 +1,19 @@
 {% include "header.html" %}
 
 <body>
-<h1>The Team 👥</h1>
-<div class="container">
-	{% for member in members %}
-		<div class="blocks block">
-			<h2>{{member["name"]}}</h2>
-			<img src="{{member['avatarUrl']}}" alt="{{member['name']}}" style="width: 40%; border-radius: 50%;">
-			<br><br>
-			<p style="background-color: white; color: black; width: 60%; margin: 0 auto;   border-radius: 5%;">{{member["bio"]}}</p>
+  <h1>The Team 👥</h1>
+  <div class="about-container">
+    {% for member in members %}
+      <div class="blocks block">
+        <h2>{{member["name"]}}</h2>
+        <img src="{{member['avatarUrl']}}" alt="{{member['name']}}" style="width: 40%; border-radius: 50%;">
+        <br><br>
+        <p style="background-color: white; color: black; width: 60%; margin: 0 auto; border-radius: 5%;">{{member["bio"]}}</p>
 
-		</div>
+      </div>
 
-	{% endfor %}
+    {% endfor %}
 
-</div>
+  </div>
 </body>
 </html>
