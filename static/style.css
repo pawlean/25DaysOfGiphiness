@@ -24,6 +24,11 @@ body {
   margin: 0 auto;
 }
 
+.about-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 @supports (display: grid) {
   .container {
     display: grid;
@@ -143,6 +148,12 @@ body {
   }
 }
 
+@supports not (display: grid) {
+  .about-container {
+    margin-bottom: 25px;
+  }
+}
+
 .days {
   flex: 1 1 220px;
   display: flex;
@@ -161,6 +172,26 @@ body {
 .day25 {
   grid-area: day25;
   min-height: 200px;
+}
+
+.blocks {
+  display: flex;
+  flex: 1 1 33%;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+}
+
+@media screen and (max-width: 750px) {
+  .blocks {
+    flex: 1 1 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blocks {
+    flex: 1 1 100%;
+  }
 }
 
 .block {
