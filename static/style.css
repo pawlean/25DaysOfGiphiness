@@ -339,76 +339,39 @@ a:hover {
   position: absolute;
   -webkit-animation-name: skating;
   /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 7s;
+  -webkit-animation-duration: 1.5s;
   /* Safari 4.0 - 8.0 */
   animation-name: skating;
-  animation-duration: 3s;
-  animation-duration: 3000ms;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
-}
-
-/* Safari 4.0 - 8.0 */
-
-@-webkit-keyframes skating {
-  0% {
-    background-color: red;
-    left: 0px;
-    top: 0px;
-  }
-  25% {
-    background-color: yellow;
-    left: 200px;
-    top: 0px;
-  }
-  50% {
-    background-color: blue;
-    left: 200px;
-    top: 200px;
-  }
-  75% {
-    background-color: green;
-    left: 0px;
-    top: 200px;
-  }
-  100% {
-    background-color: red;
-    left: 0px;
-    top: 0px;
-  }
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* Standard syntax */
 
 @keyframes skating {
   0% {
-    left: 1600px;
+    left: 100vw;
     top: 0px;
     opacity: 0;
   }
   25% {
-    left: 1200px;
+    left: 75vw;
     top: 0px;
     opacity: 1;
   }
   50% {
-    left: 800px;
+    left: 50vw;
     top: 0px;
     opacity: 0.85;
   }
   75% {
-    left: 400px;
+    left: 25vw;
     top: 0px;
     opacity: 0.95;
   }
   100% {
-    left: -100px;
+    left: -5vw;
     top: 0px;
     opacity: 0;
   }
