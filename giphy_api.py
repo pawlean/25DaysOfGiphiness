@@ -14,13 +14,18 @@ def get_gifs(keyword="christmas"):
     params = {
         "api_key": os.environ["giphy_api_key"],
         "q": keyword,
-        "limit": 25
+        "rating": "pg",
+        "limit": 30
     }
     gif_res = requests.get("https://api.giphy.com/v1/gifs/search", params=params)
     if gif_res.status_code == 200:
         gif_json_res = gif_res.json()["data"]
+        # super simple black list added based on manual inspection
+        # to filter out duplicates
+        black_list = ["decorating christmas tree GIF"]
         resp = [(correct_url(gif["images"]["fixed_width"]["url"]), gif["title"])
-                for gif in gif_json_res]
+                for i, gif in enumerate(gif_json_res) if gif["title"] not in black_list
+                and i <= 25]
         return resp
     else:
         # fallback in case of API key error
