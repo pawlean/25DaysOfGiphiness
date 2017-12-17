@@ -273,9 +273,9 @@ a:hover {
   background: none;
   font-family: Androgyne;
   background-image:
-    url('http://www.wearewebstars.dk/codepen/img/s1.png'),
-    url('http://www.wearewebstars.dk/codepen/img//s2.png'),
-    url('http://www.wearewebstars.dk/codepen/img//s3.png');
+    url('s1.png'),
+    url('s2.png'),
+    url('s3.png');
   -webkit-animation: snow 10s linear infinite;
   -moz-animation: snow 10s linear infinite;
   -ms-animation: snow 10s linear infinite;
