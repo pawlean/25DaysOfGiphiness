@@ -22,10 +22,9 @@ def get_gifs(keyword="christmas"):
         gif_json_res = gif_res.json()["data"]
         # super simple black list added based on manual inspection
         # to filter out duplicates
-        black_list = ["decorating christmas tree GIF"]
+        black_list = ["decorating christmas tree GIF", "christmas GIF"]
         resp = [(correct_url(gif["images"]["fixed_width"]["url"]), gif["title"])
-                for i, gif in enumerate(gif_json_res) if gif["title"] not in black_list
-                and i <= 25]
+                for gif in gif_json_res if gif["title"] not in black_list][:25]
         return resp
     else:
         # fallback in case of API key error
