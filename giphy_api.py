@@ -12,7 +12,7 @@ def get_gifs(keyword="christmas"):
         return re.sub(r"media[0-9]", "i", wrong_url)
 
     params = {
-        "api_key": os.environ["giphy_api_key"],
+        "api_key": os.getenv("giphy_api_key"),
         "q": keyword,
         "rating": "pg",
         "limit": 30

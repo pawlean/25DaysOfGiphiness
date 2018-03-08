@@ -8,12 +8,19 @@ $(() => {
 
     for (let i = 1; i <= 25; i++) {
         $(`.day${i}`).click(function() {
-            if (i <= parseInt(d)) {
+            if (date.getMonth() == 11) {
+                // We are in Christmas month, so don't let user open past today...
+                if (i <= parseInt(d)) {
+                    $("h1", this).addClass("hidden");
+                    $("img", this).removeClass("hidden");
+                } else {
+                    var j = Math.floor(Math.random() * 10);
+                    $("h1", this).text(message_list[j]);
+                }
+            } else {
+                // Not in Christmas month, so just unlock all GIFs to show off until Christmas
                 $("h1", this).addClass("hidden");
                 $("img", this).removeClass("hidden");
-            } else {
-                var j = Math.floor(Math.random() * 10);
-                $("h1", this).text(message_list[j]);
             }
         });
     }

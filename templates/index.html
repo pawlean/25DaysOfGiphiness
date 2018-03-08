@@ -10,9 +10,14 @@
       {% for i, (gif_url, title) in enumerate(gifs, start=1) %}
         <div class="days day{{i}}">
           <h1>{{i}}</h1>
+          {% if i <= this_day + 1 and is_xmas_month %}
           {# + 1 to account for potential "secret" santa feature which will allow user to reveal one future GIF #}
-          {% if i <= this_day + 1 %}
             <center><img src="{{gif_url}}" class="hidden" alt="{{title}}" ></center>
+          {% else %}
+          {# Not in a Christmas month, so just output all GIFs... #}
+            <center>
+              <img src="{{gif_url}}" class="hidden" alt="{{title}}">
+            </center>          
           {% endif %}
         </div>
       {% endfor %}

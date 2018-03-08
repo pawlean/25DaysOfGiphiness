@@ -11,8 +11,9 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     giphy_res = get_gifs()
+    todays_date = date.today()
     return render_template("index.html", gifs=giphy_res, enumerate=enumerate,
-                           this_day=date.today().day)
+                           this_day=todays_date.day, is_xmas_month=(todays_date.month == 12))
 
 @app.route("/about")
 def about():
